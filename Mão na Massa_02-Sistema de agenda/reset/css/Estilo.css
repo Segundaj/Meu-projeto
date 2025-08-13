@@ -1,0 +1,165 @@
+/* Reseta margens e padroniza fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+/* ==== ESTILO GERAL ==== */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    margin: 0;
+    padding: 0;
+    animation: fadeInPage 1s ease forwards;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==== CONTAINER ==== */
+.container {
+    background: white;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#titulo {
+    display: inline-block;
+    border-right: 3px solid #6c5ce7; /* cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* ==== FORMULÁRIO ==== */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+form input, form button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.4);
+    transform: scale(1.03);
+}
+
+form button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #4834d4;
+    transform: scale(1.05);
+}
+
+/* ==== TABELA ==== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background: #6c5ce7;
+    color: white;
+}
+
+/* ==== ANIMAÇÃO DAS LINHAS ==== */
+.contact-row {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideIn 0.4s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Remoção com fade */
+.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+/* ==== BOTÕES DE AÇÃO ==== */
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+.edit-btn {
+    background: #00b894;
+}
+
+.edit-btn:hover {
+    background: #019870;
+}
+
+.delete-btn {
+    background: #d63031;
+}
+
+.delete-btn:hover {
+    background: #b71c1c;
+}

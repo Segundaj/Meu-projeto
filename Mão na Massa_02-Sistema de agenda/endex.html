@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Agenda</title>
+    
+    <!-------LINK------->
+    <link rel="stylesheet" href="reset/css/Estilo.css">
+    
+</head>
+<body>
+    <script>
+    if(localStorage.getItem("logado") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+</script>
+    
+<div class="container">
+    <h1 id="titulo"></h1>
+
+    <!------Formulario------>
+    <form id="contact-form">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="Telefone" id="telefone" placeholder="Telefone" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <button type="submit">Salvar</button>
+    </form>
+    <!---Lista de Contactos----->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="contacto_list"></tbody>
+    <!---Fim de Contactos----->
+    </table>
+</div>
+
+    <script src="reset/js/main.js"></script>
+</body>
+</html>
